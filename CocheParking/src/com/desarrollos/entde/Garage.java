@@ -4,6 +4,8 @@ public class Garage{
     
     public void printGarage() 
     {
-        system.out.print("|*]");
+    	/* La clase System debe escribirse con la S mayuscula al ser una clase, sin esta S mayuscula no funcionaría.
+        system.out.print("|*]");*/
+    	System.out.print("|*]");
     }
 }

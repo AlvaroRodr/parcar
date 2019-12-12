@@ -30,10 +30,16 @@ public class Car
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
+        /* Falta referenciar el objeto de la clase, sin él no se puede hacer el llamado a los métodos de esta
         slowDown();
         moveDown();
-        accelerate();
-        car.printGarage();
+        accelerate(); */
+        car.slowDown();
+        car.moveDown();
+        car.accelerate();
+        /* En este caso no se debe referenciar al objeto car, sino al objeto g, el cual tiene los metodos de garage.
+        car.printGarage();*/
+        g.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -59,7 +65,9 @@ public class Car
      * @throws InterruptedException 
      */
     public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    	/*La clase "string" tiene un error de sintaxis, la letra "s" debe estar en mayusculas
+    	string c = new string("     *");*/
+    	String c = new String("     *");
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -74,8 +82,13 @@ public class Car
      * @throws InterruptedException 
      */    
     public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    	/*La clase "string" tiene un error de sintaxis como en el fallo anterior, la letra "s" debe estar en mayusculas. 
+    	 * Además, sobra el ultimo cerrar parentesis
+    	string c = new string("\t\t\t\t  *"));*/
+    	String c = new String("\t\t\t\t  *");
+    	/* En la creación del bucle for, la sintaxis debe separarse mediante ";", no con ","
+    	for(int i=0, i<5, i++)*/
+    	for(int i=0; i<5; i++)
         {
     		if(i!=4)
     			System.out.println(c);
